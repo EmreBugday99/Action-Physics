@@ -154,7 +154,7 @@ namespace ActionPhysics
                     }
 
                     // X Min -> X Max Check : My Left colliding with other right
-                    if (Mathf.Abs(bounds.min.x - otherBounds.max.x) < body.physicsCollider.bounds.size.y)
+                    if (Mathf.Abs(bounds.min.x - otherBounds.max.x) < body.physicsCollider.bounds.size.x)
                     {
                         Vector3 oldPos = body.transform.position;
                         Vector3 newPosition = new Vector3(body.previousPosition.x, oldPos.y, oldPos.z);
@@ -169,7 +169,7 @@ namespace ActionPhysics
                     }
 
                     // X Max -> X Min Check : My right colliding with other left
-                    if (Mathf.Abs(bounds.max.x - otherBounds.min.x) < body.physicsCollider.bounds.size.y)
+                    if (Mathf.Abs(bounds.max.x - otherBounds.min.x) < body.physicsCollider.bounds.size.x)
                     {
                         Vector3 oldPos = body.transform.position;
                         Vector3 newPosition = new Vector3(body.previousPosition.x, oldPos.y, oldPos.z);
@@ -184,7 +184,7 @@ namespace ActionPhysics
                     }
 
                     // Z Min -> Z Max Check : My back colliding with other forward
-                    if (Mathf.Abs(bounds.min.z - otherBounds.max.z) < body.physicsCollider.bounds.size.y)
+                    if (Mathf.Abs(bounds.min.z - otherBounds.max.z) < body.physicsCollider.bounds.size.z)
                     {
                         Vector3 oldPos = body.transform.position;
                         Vector3 newPosition = new Vector3(oldPos.x, oldPos.y, body.previousPosition.z);
@@ -199,7 +199,7 @@ namespace ActionPhysics
                     }
 
                     // Z Max -> Z Min Check : My forward colliding with other back
-                    if (Mathf.Abs(bounds.max.z - otherBounds.min.z) < body.physicsCollider.bounds.size.y)
+                    if (Mathf.Abs(bounds.max.z - otherBounds.min.z) < body.physicsCollider.bounds.size.z)
                     {
                         Vector3 oldPos = body.transform.position;
                         Vector3 newPosition = new Vector3(oldPos.x, oldPos.y, body.previousPosition.z);
